@@ -1,4 +1,4 @@
-= remote-terminal
+= Remote Terminal
 
 Description goes here.
 

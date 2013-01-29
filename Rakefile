@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "remote-terminal"
   gem.homepage = "http://github.com/igorbonadio/remote-terminal"
   gem.license = "MIT"
-  gem.summary = %Q{Remote-Terminal helps you to execute commands remotely as if you were running them locally}
-  gem.description = %Q{Remote-Terminal uses SSH and RSync to help you to execute commands remotely as if you were running them locally}
+  gem.summary = %Q{Remote Terminal helps you to execute commands remotely as if you were running them locally}
+  gem.description = %Q{Remote Terminal uses SSH and RSync to help you to execute commands remotely as if you were running them locally}
   gem.email = "igorbonadio@gmail.com"
   gem.authors = ["Igor Bonadio"]
   # dependencies defined in Gemfile
