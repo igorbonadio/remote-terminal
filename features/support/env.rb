@@ -18,3 +18,4 @@ $LOAD_PATH.unshift(File.dirname(__FILE__) + '/../../lib')
 require 'remote-terminal'
 
 require 'rspec/expectations'
+require 'cucumber/rspec/doubles'
