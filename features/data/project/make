@@ -1,0 +1,3 @@
+rsync -raze ssh . igorbonadio@ubuntu1210:Project
+ssh igorbonadio@ubuntu1210: 'cd Projetos && make'
+rsync -raze ssh igorbonadio@ubuntu1210:Projetos .
