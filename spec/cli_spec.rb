@@ -15,7 +15,7 @@ module RemoteTerminal
           and_return("rsync ")
           
       rsync.should_receive(:run).
-        with('igorbonadio@10.210.123.4:~/Projects/MyProject', '.').
+        with('igorbonadio@10.210.123.4:~/Projects/MyProject/', '.').
           and_return("rsync ")
           
       CLI.execute('make', rsync, ssh, 'features/data/project/')
@@ -34,7 +34,7 @@ module RemoteTerminal
           and_return("rsync ")
           
       rsync.should_receive(:run).
-        with('igorbonadio@10.210.123.4:~/Projects/MyProject', '../..').
+        with('igorbonadio@10.210.123.4:~/Projects/MyProject/', '../..').
           and_return("rsync ")
           
       CLI.execute('make', rsync, ssh, 'features/data/project/folder/subfolder/')
