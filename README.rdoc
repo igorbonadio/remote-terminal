@@ -15,8 +15,8 @@ And now you can start sending commands:
   
 == Requirements
 
-* rsync (http://rsync.samba.org/)
-* ssh (http://www.openssh.com/)
+* rsync (http://rsync.samba.org)
+* ssh (http://www.openssh.com)
 
 == Install
 
