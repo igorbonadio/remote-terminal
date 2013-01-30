@@ -45,6 +45,7 @@ Gem::Specification.new do |s|
     "lib/remote-terminal/project.rb",
     "lib/remote-terminal/rsync.rb",
     "lib/remote-terminal/ssh.rb",
+    "remote-terminal.gemspec",
     "spec/cli_spec.rb",
     "spec/project_spec.rb",
     "spec/rsync_spec.rb",
