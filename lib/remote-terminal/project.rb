@@ -1,5 +1,9 @@
 module RemoteTerminal
   class Project
+    attr_reader :ip
+    attr_reader :user
+    attr_reader :remote_directory
+    
     def initialize(dir)
       tmp = []
       dir.split('/').each do |d|
@@ -10,6 +14,14 @@ module RemoteTerminal
         end
       end
       @dir = tmp.join('/')
+      load_config
+    end
+    
+    def load_config
+      config = YAML::load(File.open(File.join(@dir, '.remote-terminal.yml')))
+      @ip = config['ip']
+      @user = config['user']
+      @remote_directory = config['remote_directory']
     end
     
     def Project.find(dir)
