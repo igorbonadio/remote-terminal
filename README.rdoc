@@ -12,6 +12,15 @@ And now you can start sending commands:
   $ rt ./configure
   $ rt make
   $ rt ./run_project
+  
+== Requirements
+
+* rsync (http://rsync.samba.org/)
+* ssh (http://www.openssh.com/)
+
+== Install
+
+  $ gem install remote-terminal
 
 == Contributing to Remote Terminal
  
