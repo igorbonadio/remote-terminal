@@ -8,7 +8,7 @@ require 'etc'
 addr = ARGV[0]
 user = ARGV[1]
 remote_dir = ARGV[2]
-local_dir = Etc.getpwuid.dir
+local_dir = Dir.pwd
 
 begin
   RemoteTerminal::CLI.config(addr, user, remote_dir, local_dir)

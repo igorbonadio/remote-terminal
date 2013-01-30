@@ -6,7 +6,7 @@ require 'remote-terminal'
 require 'etc'
 
 cmd = ARGV.join(' ')
-local_dir = Etc.getpwuid.dir
+local_dir = Dir.pwd
 
 begin
   puts RemoteTerminal::CLI.execute(cmd, RemoteTerminal::Rsync.new, RemoteTerminal::SSH.new, local_dir)
