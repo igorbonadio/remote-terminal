@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
+$LOAD_PATH.unshift(File.dirname(__FILE__))
+
+require 'remote-terminal'
+require 'etc'
+
+addr = ARGV[0]
+user = ARGV[1]
+remote_dir = ARGV[2]
+local_dir = Etc.getpwuid.dir
+
+begin
+  RemoteTerminal::CLI.config(addr, user, remote_dir, local_dir)
+  puts "done!"
+rescue Exception => e
+  puts e
+end
