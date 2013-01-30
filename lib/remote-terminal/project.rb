@@ -48,9 +48,14 @@ module RemoteTerminal
     def path_to(dir)
       d = dir.gsub(@dir, '').split('/').keep_if {|d| d != ''}
       if d == []
-        return '.'
+        return ''
       else
-        return d.join('/')
+        d = d.join('/')
+        if d[-1] == '/'
+          return d
+        else
+          return "#{d}/"
+        end
       end
     end
   end

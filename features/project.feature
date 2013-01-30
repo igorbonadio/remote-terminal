@@ -21,14 +21,14 @@ Feature: Project
   Scenario: Get path to the current location
     Given I am in the "features/data/project" directory
     When I get the path to my location
-    Then I should see "."
+    Then I should see ""
       
   Scenario: Get path to the current location
     Given I am in the "features/data/project/folder" directory
     When I get the path to my location
-    Then I should see "folder"
+    Then I should see "folder/"
     
   Scenario: Get path to the current location
     Given I am in the "features/data/project/folder/subfolder" directory
     When I get the path to my location
-    Then I should see "folder/subfolder"
+    Then I should see "folder/subfolder/"
