@@ -1,6 +1,6 @@
 = Remote Terminal
 
-Remote Terminal helps you to execute commands on your local and remote computer.
+Remote Terminal uses SSH and RSync to help you to execute commands remotely as if you were running them locally.
 
 For example, imagine that you are working on a C project on your local computer and you want to test it on a remote linux virtual machine. All you need to do is:
 
