@@ -1,6 +1,17 @@
 = Remote Terminal
 
-Description goes here.
+Remote Terminal helps you to execute commands on your local and remote computer.
+
+For example, imagine that you are working on a C project on your local computer and you want to test it on a remote linux virtual machine. All you need to do is:
+
+  $ cd my_project
+  $ rt-config remote_machine_address username Projects/my_remote_folder
+  
+And now you can start sending commands:
+  
+  $ rt ./configure
+  $ rt make
+  $ rt ./run_project
 
 == Contributing to remote-terminal
  
