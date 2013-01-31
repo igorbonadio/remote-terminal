@@ -2,6 +2,15 @@ require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 
 module RemoteTerminal
   describe CLI do
+    it "should configure a new remote project" do
+      FileUtils.rm('tmp/.remote-terminal') if Dir.exist?('tmp/.remote-terminal')
+      CLI.config("addr", "user", "remote_dir", "tmp")
+      config = YAML::load(File.open('tmp/.remote-terminal.yml'))
+      config['address'].should be == "addr"
+      config['user'].should be == "user"
+      config['remote_directory'].should be == "remote_dir"
+    end
+    
     it "should execute remote commands" do
       rsync = double()
       ssh = double()
