@@ -1,4 +1,4 @@
 ---
-ip: 10.210.123.4
+address: 10.210.123.4
 user: igorbonadio
 remote_directory: ~/Projects/MyProject

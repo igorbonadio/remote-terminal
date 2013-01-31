@@ -5,7 +5,7 @@ module RemoteTerminal
     it "should get project's configuration" do
       config = YAML::load(File.open('features/data/project/.remote-terminal.yml'))
       project = Project.find('features/data/project')
-      project.ip.should be == config['ip']
+      project.address.should be == config['address']
       project.user.should be == config['user']
       project.remote_directory.should be == config['remote_directory']
     end

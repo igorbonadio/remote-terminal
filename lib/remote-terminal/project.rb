@@ -1,6 +1,6 @@
 module RemoteTerminal
   class Project
-    attr_reader :ip
+    attr_reader :address
     attr_reader :user
     attr_reader :remote_directory
     
@@ -19,7 +19,7 @@ module RemoteTerminal
     
     def load_config
       config = YAML::load(File.open(File.join(@dir, '.remote-terminal.yml')))
-      @ip = config['ip']
+      @address = config['address']
       @user = config['user']
       @remote_directory = config['remote_directory']
     end
