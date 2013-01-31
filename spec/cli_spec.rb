@@ -39,5 +39,15 @@ module RemoteTerminal
           
       CLI.execute('make', rsync, ssh, 'features/data/project/folder/subfolder/')
     end
+    
+    it "should remove the last '/' of a path" do
+      CLI.without_slash('path/').should be == 'path'
+      CLI.without_slash('path').should be == 'path'
+    end
+    
+    it "should put the last '/' in a path" do
+      CLI.with_slash('path/').should be == 'path/'
+      CLI.with_slash('path').should be == 'path/'
+    end
   end
 end
