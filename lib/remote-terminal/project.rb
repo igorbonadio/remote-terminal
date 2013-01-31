@@ -50,12 +50,7 @@ module RemoteTerminal
       if d == []
         return ''
       else
-        d = d.join('/')
-        if d[-1] == '/'
-          return d
-        else
-          return "#{d}/"
-        end
+        return "#{d.join('/')}/"
       end
     end
   end
