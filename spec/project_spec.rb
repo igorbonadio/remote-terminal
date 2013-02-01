@@ -20,6 +20,14 @@ module RemoteTerminal
       project.path_to("features/data/project/folder/subfolder/").should be == "folder/subfolder/"
     end
     
-    it "should show a path from the local folder"
+    it "should show a path from the local folder" do
+      project = Project.find('features/data/project')
+      project.path_from("features/data/project").should be == "."
+      project.path_from("features/data/project/folder").should be == ".."
+      project.path_from("features/data/project/folder/subfolder").should be == "../.."
+      project.path_from("features/data/project/").should be == "."
+      project.path_from("features/data/project/folder/").should be == ".."
+      project.path_from("features/data/project/folder/subfolder/").should be == "../.."
+    end
   end
 end
