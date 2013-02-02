@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "remote-terminal"
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Igor Bonadio"]
-  s.date = "2013-01-30"
+  s.date = "2013-02-02"
   s.description = "Remote Terminal uses SSH and RSync to help you to execute commands remotely as if you were running them locally"
   s.email = "igorbonadio@gmail.com"
   s.executables = ["rt", "rt-config"]
