@@ -5,14 +5,22 @@ $LOAD_PATH.unshift(File.dirname(__FILE__))
 require 'remote-terminal'
 require 'etc'
 
-addr = ARGV[0]
-user = ARGV[1]
-remote_dir = ARGV[2]
-local_dir = Dir.pwd
+def help
+  puts "usage: rt-config remote_machine_address username Projects/my_remote_folder"
+end
 
-begin
-  RemoteTerminal::CLI.config(addr, user, remote_dir, local_dir)
-  puts "done!"
-rescue Exception => e
-  puts e
+if ARGV.size == 3
+  addr = ARGV[0]
+  user = ARGV[1]
+  remote_dir = ARGV[2]
+  local_dir = Dir.pwd
+  
+  begin
+    RemoteTerminal::CLI.config(addr, user, remote_dir, local_dir)
+    puts "done!"
+  rescue Exception => e
+    puts e
+  end
+else
+  help
 end
