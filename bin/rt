@@ -5,11 +5,27 @@ $LOAD_PATH.unshift(File.dirname(__FILE__))
 require 'remote-terminal'
 require 'etc'
 
-cmd = ARGV.join(' ')
-local_dir = Dir.pwd
+def help
+  puts "usage: rt command
+  
+  Example:
+  
+  rt ./configure
+  rt make
+  rt make install
+  "
+end
 
-begin
-  puts RemoteTerminal::CLI.execute(cmd, RemoteTerminal::Rsync.new, RemoteTerminal::SSH.new, local_dir)
-rescue Exception => e
-  puts e
+if ARGV.size > 0
+
+  cmd = ARGV.join(' ')
+  local_dir = Dir.pwd
+  
+  begin
+    puts RemoteTerminal::CLI.execute(cmd, RemoteTerminal::Rsync.new, RemoteTerminal::SSH.new, local_dir)
+  rescue Exception => e
+    puts e
+  end
+else
+  help
 end
